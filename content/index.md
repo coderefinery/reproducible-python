@@ -104,7 +104,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Command-line interfaces
   - Workflows with Snakemake
 
-- 15:00-16:30 (1.5h) - **How to release and publish your code**
+- 15:00-16:30 (1.5h) - {ref}`publishing`
   - Licenses
   - Publishing the code via Zenodo
   - Packaging the code
@@ -138,6 +138,7 @@ installation/virtual-environment
 :hidden:
 
 refactoring
+publishing
 ```
 
 ```{toctree}
