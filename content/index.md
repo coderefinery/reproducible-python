@@ -3,12 +3,15 @@
 
 ## Big-picture goal
 
-This is a hands-on course on research software engineering.  Since most
-participants use Python in their work, we will use Python as the example
-language. We will work with an example project and go through all the steps of
-a typical software project.  Once we have seen the building blocks, we will try
-to apply them to own projects. Workshop participants will receive and also
-learn to give constructive code feedback.
+This is a **hands-on course on research software engineering**. In this
+workshop we assume that most workshop participants use Python in their work or
+a leading a group which uses Python.  Therefore, some of the examples will use
+Python as the example language.
+
+We will work with an example project and go through all the steps of a typical
+software project.  Once we have seen the building blocks, we will try to apply
+them to own projects. Workshop participants will receive and also learn to give
+constructive code feedback.
 
 
 ## Prerequisites
@@ -92,7 +95,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Tracking dependencies with requirements.txt and environment.yml
   - Recording environments in containers
 
-- 13:00-14:45 (1.75h) - **Code quality and good practices**
+- 13:00-14:45 (1.75h) - {ref}`refactoring`
   - Naming (and other) conventions, project organization, modularity
   - Refactoring (explained through examples)
   - Design patterns: functional design vs. object-oriented design
@@ -102,10 +105,10 @@ The schedule will very soon contain links to lesson material and exercises.
   - Workflows with Snakemake
 
 - 15:00-16:30 (1.5h) - **How to release and publish your code**
-  - Packaging the code
   - Licenses
-  - Sharing the code via PyPI
   - Publishing the code via Zenodo
+  - Packaging the code
+  - Sharing the code via PyPI
 
 - 16:45-18:00 (1.25h) - **Debriefing and Q&A**
   - Participants work on their projects
@@ -127,6 +130,14 @@ The schedule will very soon contain links to lesson material and exercises.
 
 installation/conda
 installation/virtual-environment
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Episodes
+:hidden:
+
+refactoring
 ```
 
 ```{toctree}
