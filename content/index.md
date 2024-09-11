@@ -91,7 +91,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - pytest
   - GitHub Actions
 
-- 10:45-12:15 (1.5h) - **How to make the project more reusable?**
+- 10:45-12:15 (1.5h) - {ref}`reusable`
   - Tracking dependencies with requirements.txt and environment.yml
   - Recording environments in containers
 
@@ -139,6 +139,7 @@ installation/virtual-environment
 
 documentation
 testing
+reusable
 refactoring
 publishing
 ```
