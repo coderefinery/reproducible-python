@@ -55,7 +55,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Branching and merging
   - Recovering from typical mistakes
 
-- 16:45-18:00 (1.25h) - **Documentation**
+- 16:45-18:00 (1.25h) - {ref}`documentation`
   - In-code documentation including docstrings
   - Writing good README files
   - Markdown
@@ -85,7 +85,7 @@ The schedule will very soon contain links to lesson material and exercises.
 
 ### Day 3 (Sep 18)
 
-- 09:00-10:30 (1.5h) - **Automated testing**
+- 09:00-10:30 (1.5h) - {ref}`testing`
   - Unit tests
   - End-to-end tests
   - pytest
@@ -137,6 +137,8 @@ installation/virtual-environment
 :caption: Episodes
 :hidden:
 
+documentation
+testing
 refactoring
 publishing
 ```
