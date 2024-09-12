@@ -66,15 +66,14 @@ The schedule will very soon contain links to lesson material and exercises.
 
 ### Day 2
 
-- 09:00-10:30 (1.5h) - **Collaborative version control and code review (1/2)**
-  - Practice code review using issues and pull requests
-  - Forking workflow
-  - Contributing changes to projects of others
+- 09:00-10:30 - {ref}`collaboration` (1/2)
+  - {ref}`concepts` (10 min)
+  - {ref}`same-repository` (40 min)
+  - {ref}`code-review` (40 min)
 
-- 10:45-12:15 (1.5h) - **Collaborative version control and code review (2/2)**
-  - Organization strategies
-  - Merge vs. rebase
-  - Conflict resolution
+- 10:45-12:15 - {ref}`collaboration` (2/2)
+  - {ref}`forking-workflow` (50 min)
+  - {ref}`collaboration-demo-discussion` (40 min)
 
 - 16:45-18:00 - **Debriefing and Q&A**
   - Participants work on their projects
@@ -139,6 +138,7 @@ installation/virtual-environment
 
 example
 documentation
+collaboration
 testing
 reusable
 refactoring
