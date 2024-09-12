@@ -41,7 +41,7 @@ The schedule will very soon contain links to lesson material and exercises.
 
 ### Day 1 (Sep 16)
 
-- 13:00-13:30 (0.5h) - **Welcome and introduction**
+- 13:00-13:30 - **Welcome and introduction**
   - Practical information (tools, communication, breaks, etc.)
   - Motivation (reproducibility, robustness, distribution, improvement, trust, etc.)
   - What will learn and achieve from this course?
@@ -55,7 +55,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Branching and merging
   - Recovering from typical mistakes
 
-- 16:45-18:00 (1.25h) - {ref}`documentation`
+- 16:45-18:00 - {ref}`documentation`
   - In-code documentation including docstrings
   - Writing good README files
   - Markdown
@@ -76,7 +76,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Merge vs. rebase
   - Conflict resolution
 
-- 16:45-18:00 (1.25h) - **Debriefing and Q&A**
+- 16:45-18:00 - **Debriefing and Q&A**
   - Participants work on their projects
   - Together we study actual codes that participants wrote or work on
   - Constructively we discuss possible improvements
@@ -85,17 +85,17 @@ The schedule will very soon contain links to lesson material and exercises.
 
 ### Day 3 (Sep 18)
 
-- 09:00-10:30 (1.5h) - {ref}`testing`
+- 09:00-10:30 - {ref}`testing`
   - Unit tests
   - End-to-end tests
   - pytest
   - GitHub Actions
 
-- 10:45-12:15 (1.5h) - {ref}`reusable`
+- 10:45-12:15 - {ref}`reusable`
   - Tracking dependencies with requirements.txt and environment.yml
   - Recording environments in containers
 
-- 13:00-14:45 (1.75h) - {ref}`refactoring`
+- 13:00-14:45 - {ref}`refactoring`
   - Naming (and other) conventions, project organization, modularity
   - Refactoring (explained through examples)
   - Design patterns: functional design vs. object-oriented design
@@ -104,13 +104,13 @@ The schedule will very soon contain links to lesson material and exercises.
   - Command-line interfaces
   - Workflows with Snakemake
 
-- 15:00-16:30 (1.5h) - {ref}`publishing`
+- 15:00-16:30 - {ref}`publishing`
   - Licenses
   - Publishing the code via Zenodo
   - Packaging the code
   - Sharing the code via PyPI
 
-- 16:45-18:00 (1.25h) - **Debriefing and Q&A**
+- 16:45-18:00 - **Debriefing and Q&A**
   - Participants work on their projects
   - Together we study actual codes that participants wrote or work on
   - Constructively we discuss possible improvements
