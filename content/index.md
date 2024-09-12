@@ -42,8 +42,8 @@ The schedule will very soon contain links to lesson material and exercises.
 ### Day 1 (Sep 16)
 
 - 13:00-13:30 (0.5h) - **Welcome and introduction**
-  - Motivation (reproducibility, robustness, distribution, improvement, trust, etc.)
   - Practical information (tools, communication, breaks, etc.)
+  - Motivation (reproducibility, robustness, distribution, improvement, trust, etc.)
   - What will learn and achieve from this course?
   - {ref}`example-project`
 

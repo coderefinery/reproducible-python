@@ -29,7 +29,7 @@ from skimage import io, filters, color
 from skimage.measure import label, regionprops
 
 
-image = io.imread("stars-000.png")
+image = io.imread("stars.png")
 sigma = 0.5
 
 # if there is a fourth channel (alpha channel), ignore it
