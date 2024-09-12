@@ -12,7 +12,7 @@ the image. Later we will want to be able to process many such images.
 
 The (fictional) telescope images look like the one below here ([in this
 repository](https://github.com/workshop-material/random-star-images) we can find more):
-:::{figure} img/stars.png
+:::{figure} refactoring/stars.png
 :alt: Generated image representing a telescope image of stars
 :width: 60%
 
