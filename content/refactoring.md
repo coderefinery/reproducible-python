@@ -11,7 +11,7 @@ telescope image of stars and our goal is to **count the number of stars** in
 the image. Later we will want to be able to process many such images.
 
 The (fictional) telescope images look like the one below here ([in this
-repository](https://github.com/bast/random-star-images) we can find more):
+repository](https://github.com/workshop-material/random-star-images) we can find more):
 :::{figure} img/stars.png
 :alt: Generated image representing a telescope image of stars
 :width: 60%
