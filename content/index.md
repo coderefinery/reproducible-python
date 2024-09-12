@@ -45,7 +45,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Motivation (reproducibility, robustness, distribution, improvement, trust, etc.)
   - Practical information (tools, communication, breaks, etc.)
   - What will learn and achieve from this course?
-  - Example Python project we will use and develop
+  - {ref}`example-project`
 
 - 13:30-14:45 (1.25h) - **Introduction to version control with Git and GitHub (1/2)**
   - Creating a repository and porting your project to Git and GitHub
@@ -137,6 +137,7 @@ installation/virtual-environment
 :caption: Episodes
 :hidden:
 
+example
 documentation
 testing
 reusable
