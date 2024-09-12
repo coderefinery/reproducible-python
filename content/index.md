@@ -39,7 +39,7 @@ The schedule will very soon contain links to lesson material and exercises.
 :::
 
 
-### Day 1 (Sep 16)
+### Day 1
 
 - 13:00-13:30 - **Welcome and introduction**
   - Practical information (tools, communication, breaks, etc.)
@@ -64,7 +64,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Jupyter Notebooks
 
 
-### Day 2 (Sep 17)
+### Day 2
 
 - 09:00-10:30 (1.5h) - **Collaborative version control and code review (1/2)**
   - Practice code review using issues and pull requests
@@ -83,7 +83,7 @@ The schedule will very soon contain links to lesson material and exercises.
   - Give individual feedback on code projects
 
 
-### Day 3 (Sep 18)
+### Day 3
 
 - 09:00-10:30 - {ref}`testing`
   - Unit tests
