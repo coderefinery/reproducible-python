@@ -228,9 +228,11 @@ There are at least two ways to get started with Sphinx:
 
 1. Try to open `_build/index.html` in your browser.
 
-1. Experiment with adding more content, images, equations, code blocks.
-
-   (we need examples here on how to do that)
+1. Experiment with adding more content, images, equations, code blocks, ...
+   - [typography](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
+   - [images](https://myst-parser.readthedocs.io/en/latest/syntax/images_and_figures.html)
+   - [math and equations](https://myst-parser.readthedocs.io/en/latest/syntax/math.html)
+   - [code blocks](https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html)
 ::::
 
 There is a lot more you can do:
@@ -241,17 +243,6 @@ There is a lot more you can do:
 - [sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
   provides a local web server that will automatically refresh your view
   every time you save a file - which makes writing and testing much easier.
-
-
-## Confused about reStructuredText vs. Markdown vs. MyST?
-
-- At the beginning there was reStructuredText and Sphinx was built for reStructuredText.
-- Independently, Markdown was invented and evolved into a couple of flavors.
-- Markdown became more and more popular but was limited compared to reStructuredText.
-- Later, [MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
-  was invented to be able to write
-  something that looks like Markdown but in addition can do everything that
-  reStructuredText can do with extra directives.
 
 
 ## Demo: Building documentation with GitHub Actions
@@ -371,6 +362,17 @@ Then rebuild the documentation (or push the changes and let GitHub rebuild it)
 and you should see a new section "API Reference".
 
 
+## Confused about reStructuredText vs. Markdown vs. MyST?
+
+- At the beginning there was reStructuredText and Sphinx was built for reStructuredText.
+- Independently, Markdown was invented and evolved into a couple of flavors.
+- Markdown became more and more popular but was limited compared to reStructuredText.
+- Later, [MyST](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
+  was invented to be able to write
+  something that looks like Markdown but in addition can do everything that
+  reStructuredText can do with extra directives.
+
+
 ## Where to read more
 
 - [CodeRefinery documentation lesson](https://coderefinery.github.io/documentation/)
@@ -378,5 +380,4 @@ and you should see a new section "API Reference".
 - [Sphinx + ReadTheDocs guide](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html)
 - For more Markdown functionality, see the [Markdown guide](https://www.markdownguide.org/basic-syntax/).
 - For Sphinx additions, see [Sphinx Markup Constructs](https://www.sphinx-doc.org/en/master/markup/index.html).
-- [https://docs.python-guide.org/writing/documentation/](https://docs.python-guide.org/writing/documentation/)
-- [MyST parser](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html)
+- [An opinionated guide on documentation in Python](https://docs.python-guide.org/writing/documentation/)
