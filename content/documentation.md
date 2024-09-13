@@ -331,6 +331,7 @@ Now:
 - Finally visit the generated site. You find it by clicking the About wheel
   icon on top right of your repository. There, select "Use your GitHub Pages
   website".
+- **This is how we build almost all of our lesson websites** (including this one).
 
 
 ## Optional: How to auto-generate API documentation in Python
