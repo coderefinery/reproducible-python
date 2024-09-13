@@ -12,7 +12,7 @@ then the convention is: **one line summarizing the commit, then one empty line,
 then paragraph(s) with more details in free form, if necessary**.
 
 Good example:
-```{code-block} txt
+```{code-block} text
 ---
 emphasize-lines: 1
 ---
