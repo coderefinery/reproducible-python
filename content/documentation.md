@@ -139,14 +139,13 @@ Diátaxis is a systematic approach to technical documentation authoring.
 
 :::{prereq} Preparation
 In this episode we will use the following 5 packages which we installed
-previously as part of the {ref}`conda` or {ref}`venv` (the version
-restrictions were needed at the time of writing this page).
+previously as part of the {ref}`conda` or {ref}`venv`:
 ```
-myst_parser
+myst-parser
 sphinx
-sphinx_rtd_theme < 2.0
-sphinx_autoapi < 2024.9
-sphinx_autobuild
+sphinx-rtd-theme
+sphinx-autoapi
+sphinx-autobuild
 ```
 
 Which repository to use? You have 3 options:
@@ -257,14 +256,90 @@ There is a lot more you can do:
 
 ## Demo: Building documentation with GitHub Actions
 
+First we need to extend the `environment.yml` file to include the necessary packages:
+```{code-block} yaml
+---
+emphasize-lines: 9-12
+---
+name: planets
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - click
+  - matplotlib
+  - myst-parser
+  - sphinx
+  - sphinx-rtd-theme
+  - sphinx-autoapi
+```
+
+Then we add a GitHub Actions workflow `.github/workflow/sphinx.yml` to build the documentation:
+```{code-block} yaml
+---
+emphasize-lines: 31
+---
+name: Build documentation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - uses: mamba-org/setup-micromamba@v1
+      with:
+        micromamba-version: '1.5.8-0' # any version from https://github.com/mamba-org/micromamba-releases
+        environment-file: environment.yml
+        init-shell: bash
+        cache-environment: true
+        post-cleanup: 'all'
+        generate-run-shell: false
+
+    - name: Sphinx build
+      run: |
+        sphinx-build doc _build
+      shell: bash -el {0}
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      with:
+        publish_branch: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: _build/
+        force_orphan: true
+```
+
+Now:
+- Add these two changes to the GitHub repository.
+- Go to "Settings" -> "Pages" -> "Branch" -> `gh-pages` -> "Save".
+- Look at "Actions" tab and observe the workflow running and hopefully
+  deploying the website.
+- Finally visit the generated site. You find it by clicking the About wheel
+  icon on top right of your repository. There, select "Use your GitHub Pages
+  website".
+
 
 ## Optional: How to auto-generate API documentation in Python
 
-Add two tiny modifications to `doc/conf.py` to auto-generate API documentation
+Add three tiny modifications (highlighted) to `doc/conf.py` to auto-generate API documentation
 (this requires the `sphinx-autoapi` package):
 ```{code-block} python
 ---
-emphasize-lines: 10, 14
+emphasize-lines: 10, 14, 17
 ---
 project = "planets"
 copyright = "2024, Authors"
@@ -275,11 +350,14 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 extensions = [
     "myst_parser",  # in order to use markdown
-    "autoapi.extension",
+    "autoapi.extension",  # in order to use markdown
 ]
 
-# it will search this directory for Python files
-autoapi_dirs = ['..']
+# search this directory for Python files
+autoapi_dirs = [".."]
+
+# ignore this file when generating API documentation
+autoapi_ignore = ["*/conf.py"]
 
 myst_enable_extensions = [
     "colon_fence",  # ::: can be used instead of ``` for better rendering
