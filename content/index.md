@@ -116,10 +116,9 @@ The schedule will very soon contain links to lesson material and exercises.
   - Give individual feedback on code projects
 
 
-### Extra material if we have time
+### If we have time left
 
-- Profiling memory and CPU usage
-- Strategies for parallelization
+- {ref}`profiling`
 
 
 ```{toctree}
@@ -143,6 +142,7 @@ testing
 reusable
 refactoring
 publishing
+profiling
 ```
 
 ```{toctree}
