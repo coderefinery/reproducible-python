@@ -34,11 +34,6 @@ constructive code feedback.
 
 ## Schedule
 
-:::{note}
-The schedule will very soon contain links to lesson material and exercises.
-:::
-
-
 ### Day 1
 
 - 13:00-13:30 - **Welcome and introduction**
@@ -47,11 +42,12 @@ The schedule will very soon contain links to lesson material and exercises.
   - What will learn and achieve from this course?
   - {ref}`example-project`
 
-- 13:30-14:45 (1.25h) - **Introduction to version control with Git and GitHub (1/2)**
+- 13:30-14:45 - {ref}`version-control` (1/2)
+  - {ref}`version-control-motivation` (15 min)
   - Creating a repository and porting your project to Git and GitHub
   - Basic commands
 
-- 15:00-16:30 (1.5h) - **Introduction to version control with Git and GitHub (2/2)**
+- 15:00-16:30 - {ref}`version-control` (2/2)
   - Branching and merging
   - Recovering from typical mistakes
 
@@ -126,6 +122,7 @@ installation/virtual-environment
 :hidden:
 
 example
+version-control
 documentation
 collaboration
 testing
