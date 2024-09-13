@@ -126,9 +126,11 @@ which files might not be tracked, etc.
 
 - Committing **unrelated changes** together.
 
-- Postponing commits because the changes are "unfinished"/"ugly".
+- Postponing commits because the changes are "unfinished"/"ugly" -> better ugly
+  commits than no commits.
 
 - When working with branches:
   - Not updating your branch before starting new work.
   - Too ambitious branch which risks to never get completed.
   - Over-engineering the branch layout and safeguards in small projects.
+  - Working on unrelated things on the same branch.
