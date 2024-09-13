@@ -6,4 +6,5 @@
 :maxdepth: 1
 
 version-control/motivation.md
+version-control/practical-advice.md
 ```

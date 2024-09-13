@@ -50,6 +50,7 @@ constructive code feedback.
 - 15:00-16:30 - {ref}`version-control` (2/2)
   - Branching and merging
   - Recovering from typical mistakes
+  - {ref}`practical-advice` (20 min)
 
 - 16:45-18:00 - {ref}`documentation`
 
