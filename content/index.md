@@ -79,10 +79,6 @@ The schedule will very soon contain links to lesson material and exercises.
 ### Day 3
 
 - 09:00-10:30 - {ref}`testing`
-  - Unit tests
-  - End-to-end tests
-  - pytest
-  - GitHub Actions
 
 - 10:45-12:15 - {ref}`reusable`
   - Tracking dependencies with requirements.txt and environment.yml
