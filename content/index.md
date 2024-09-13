@@ -56,12 +56,6 @@ The schedule will very soon contain links to lesson material and exercises.
   - Recovering from typical mistakes
 
 - 16:45-18:00 - {ref}`documentation`
-  - In-code documentation including docstrings
-  - Writing good README files
-  - Markdown
-  - Sphinx
-  - Building documentation with GitHub Actions
-  - Jupyter Notebooks
 
 
 ### Day 2
