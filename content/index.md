@@ -79,8 +79,6 @@ constructive code feedback.
 - 09:00-10:30 - {ref}`testing`
 
 - 10:45-12:15 - {ref}`reusable`
-  - Tracking dependencies with requirements.txt and environment.yml
-  - Recording environments in containers
 
 - 13:00-14:45 - Code quality and good practices
   - {ref}`refactoring-demo` (90 min)
