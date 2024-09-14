@@ -12,3 +12,5 @@ Profilers:
 - py-spy
 - Pyflame
 - timeit
+
+(here I will add some examples that we can profile together)

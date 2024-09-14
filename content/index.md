@@ -82,14 +82,9 @@ constructive code feedback.
   - Tracking dependencies with requirements.txt and environment.yml
   - Recording environments in containers
 
-- 13:00-14:45 - {ref}`refactoring`
-  - Naming (and other) conventions, project organization, modularity
-  - Refactoring (explained through examples)
-  - Design patterns: functional design vs. object-oriented design
-  - How to design your code before writing it
-  - Structuring larger software projects in a modular way
-  - Command-line interfaces
-  - Workflows with Snakemake
+- 13:00-14:45 - Code quality and good practices
+  - {ref}`refactoring-demo` (90 min)
+  - {ref}`refactoring-concepts` (15 min)
 
 - 15:00-16:30 - {ref}`publishing`
   - Licenses
@@ -129,7 +124,8 @@ documentation
 collaboration
 testing
 reusable
-refactoring
+refactoring-demo
+refactoring-concepts
 publishing
 profiling
 ```

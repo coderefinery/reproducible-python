@@ -1,6 +1,6 @@
-(refactoring)=
+(refactoring-demo)=
 
-# Code quality and good practices
+# Demo: From a script towards a workflow
 
 In this episode we will explore code quality and good practices in Python using
 a hands-on approach. We will together build up a small project and improve it
@@ -17,6 +17,14 @@ repository](https://github.com/workshop-material/random-star-images) we can find
 :width: 60%
 
 Generated image representing a telescope image of stars.
+:::
+
+:::{admonition} Rough plan for this demo
+- (15 min) Discuss how we would solve the problem, run example code, and make it work (as part of a Jupyter notebook)?
+- (15 min) Refactor the positioning code into a function and a module
+- (15 min) Now we wish to process many images - discuss how we would approach this
+- (15 min) Introduce CLI and discuss the benefits
+- (30 min) From a script to a workflow (using Snakemake)
 :::
 
 :::{solution} Starting point (spoiler alert)
@@ -67,21 +75,39 @@ print(f"number of stars detected: {len(star_positions)}")
 :::
 
 
-Part 1:
-- 15 min: Discuss how we would solve the problem, run example code, and make it work
-  as part of a Jupyter notebook.
-- 15 min: Refactor the positioning code into a function and a module
-- 15 min: Now we wish to process many images - discuss how we would approach this
-- 15 min: Introduce CLI and discuss the benefits
+## Plan
 
-Part 2:
-- 30 min: From a script to a workflow (using Snakemake)
-- 15 min: Discuss concepts
-  - Pure functions
-  - Design patterns: functional design vs. object-oriented design
-  - How to design your code before writing it: document-driven development
+Topics we wish to show and discuss:
+- Naming (and other) conventions, project organization, modularity
+- The value of pure functions and immutability
+- Refactoring (explained through examples)
+- Auto-formatting and linting with tools like black, vulture, ruff
+- Moving a project under Git
+- How to document dependencies
+- Structuring larger software projects in a modular way
+- Command-line interfaces
+- Workflows with Snakemake
 
-Bonus:
-- Move it under Git
-- Document dependencies
-- Show nbdime, black, vulture, ruff
+We will **end up with a Git repository** which will be shared with workshop participants.
+
+
+## Possible solutions
+
+:::{solution} Script after some work, with command-line interface (spoiler alert)
+This is one possible solution (`count-stars.py`):
+```{literalinclude} refactoring/count-stars.py
+:language: python
+```
+:::
+
+:::{solution} Snakemake rules which define a workflow (spoiler alert)
+This is one possible solution (`snakefile`):
+```{literalinclude} refactoring/snakefile
+:language: python
+```
+
+We can process as many images as we like by running:
+```console
+$ snakemake --cores 4  # adjust to the number of available cores
+```
+:::
