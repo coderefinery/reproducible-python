@@ -44,10 +44,12 @@ constructive code feedback.
 
 - 13:30-14:45 - {ref}`version-control` (1/2)
   - {ref}`version-control-motivation` (15 min)
-  - Forking, cloning, browsing, and creating branches and commits
+  - {ref}`browsing` (30 min)
+  - {ref}`branching-and-committing` (30 min)
 
 - 15:00-16:30 - {ref}`version-control` (2/2)
-  - Merging and conflict resolution
+  - Merging (40 min)
+  - Conflict resolution (30 min)
   - {ref}`practical-advice` (20 min)
   - {ref}`sharing-repositories` (30 min)
 

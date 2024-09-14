@@ -6,6 +6,8 @@
 :maxdepth: 1
 
 version-control/motivation.md
+version-control/browsing.md
+version-control/branching-and-committing.md
 version-control/practical-advice.md
 version-control/sharing.md
 ```
