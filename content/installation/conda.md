@@ -80,8 +80,3 @@ If you are new to this, **we recommend using Miniconda or Miniforge**.
    ```console
    $ conda env list
    ```
-
-
-## How to verify that this worked
-
-(this will be added)

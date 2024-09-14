@@ -75,8 +75,3 @@ $ uv pip install -r requirements.txt
 ::::
 
 :::::
-
-
-## How to verify that this worked
-
-(this will be added)
