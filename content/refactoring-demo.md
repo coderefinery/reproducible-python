@@ -88,7 +88,9 @@ Topics we wish to show and discuss:
 - Command-line interfaces
 - Workflows with Snakemake
 
-We will **end up with a Git repository** which will be shared with workshop participants.
+We will work together on the code on the big screen, and participants will be
+encouraged to give suggestions and ask questions.  We will **end up with a Git
+repository** which will be shared with workshop participants.
 
 
 ## Possible solutions
