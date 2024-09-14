@@ -44,13 +44,12 @@ constructive code feedback.
 
 - 13:30-14:45 - {ref}`version-control` (1/2)
   - {ref}`version-control-motivation` (15 min)
-  - Creating a repository and porting your project to Git and GitHub
-  - Basic commands
+  - Forking, cloning, browsing, and creating branches and commits
 
 - 15:00-16:30 - {ref}`version-control` (2/2)
-  - Branching and merging
-  - Recovering from typical mistakes
+  - Merging and conflict resolution
   - {ref}`practical-advice` (20 min)
+  - {ref}`sharing-repositories` (30 min)
 
 - 16:45-18:00 - {ref}`documentation`
 

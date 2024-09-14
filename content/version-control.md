@@ -7,4 +7,5 @@
 
 version-control/motivation.md
 version-control/practical-advice.md
+version-control/sharing.md
 ```
