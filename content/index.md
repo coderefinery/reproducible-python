@@ -48,8 +48,8 @@ constructive code feedback.
   - {ref}`branching-and-committing` (30 min)
 
 - 15:00-16:30 - {ref}`version-control` (2/2)
-  - Merging (40 min)
-  - Conflict resolution (30 min)
+  - {ref}`merging` (40 min)
+  - {ref}`conflict-resolution` (30 min)
   - {ref}`practical-advice` (20 min)
   - {ref}`sharing-repositories` (30 min)
 
