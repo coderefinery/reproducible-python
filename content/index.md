@@ -86,11 +86,9 @@ constructive code feedback.
   - {ref}`refactoring-demo` (90 min)
   - {ref}`refactoring-concepts` (15 min)
 
-- 15:00-16:30 - {ref}`publishing`
-  - Licenses
-  - Publishing the code via Zenodo
-  - Packaging the code
-  - Sharing the code via PyPI
+- 15:00-16:30 - How to release and publish your code
+  - {ref}`licensing-publishing` (45 min)
+  - {ref}`packaging` (45 min)
 
 - 16:45-18:00 - **Debriefing and Q&A**
   - Participants work on their projects
@@ -126,7 +124,8 @@ testing
 reusable
 refactoring-demo
 refactoring-concepts
-publishing
+licensing-publishing
+packaging
 profiling
 ```
 
