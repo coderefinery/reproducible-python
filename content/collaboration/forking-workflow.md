@@ -15,7 +15,7 @@ accept modifications without having to grant write access to others.
 
 :::{prereq} Exercise preparation
 - The exercise repository is now different:
-  <https://github.com/workshop-material/recipe-book-forking-exercise> (note the `-forking-exercise`).
+  <https://github.com/workshop-material/recipe-book-forking-exercise> (note the **-forking-exercise**).
 - First **fork** the exercise repository to your GitHub account.
 - Then **clone your fork** to your computer (if you wish to work locally).
 - Double-check that you have forked the correct repository.

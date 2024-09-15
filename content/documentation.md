@@ -104,6 +104,14 @@ See also the
 [JOSS review checklist](https://joss.readthedocs.io/en/latest/review_checklist.html).
 
 
+## Diátaxis
+
+Diátaxis is a systematic approach to technical documentation authoring.
+
+- Overview: <https://diataxis.fr/>
+- How to use Diátaxis **as a guide** to work: <https://diataxis.fr/how-to-use-diataxis/>
+
+
 ## What if you need more than a README?
 
 - Write documentation in
@@ -125,14 +133,6 @@ See also the
 
 - Deploy the generated HTML to [GitHub Pages](https://pages.github.com/) or
   [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
-
-
-## Diátaxis
-
-Diátaxis is a systematic approach to technical documentation authoring.
-
-- Overview: <https://diataxis.fr/>
-- How to use Diátaxis **as a guide** to work: <https://diataxis.fr/how-to-use-diataxis/>
 
 
 ## Exercise: Set up a Sphinx documentation
@@ -158,13 +158,13 @@ Which repository to use? You have 3 options:
 
 There are at least two ways to get started with Sphinx:
 1. Use `sphinx-quickstart` to create a new Sphinx project.
-1. **This is what we will do**: Create three files (`doc/conf.py`, `doc/index.md`, and `doc/about.md`)
+1. **This is what we will do instead**: Create three files (`doc/conf.py`, `doc/index.md`, and `doc/about.md`)
    as starting point and improve from there.
 
 ::::{exercise} Exercise: Set up a Sphinx documentation
 1. Create the following three files in your project:
    ```
-   planets/
+   planets/      <- or your own project
    ├── doc/
    │   ├── conf.py
    │   ├── index.md
@@ -192,7 +192,7 @@ There are at least two ways to get started with Sphinx:
    html_theme = "sphinx_rtd_theme"
    ```
 
-   This is `index.md` (feel free to adjust):
+   This is `index.md` (feel free to change the example text):
    ```markdown
    # Our code documentation
 
@@ -242,10 +242,15 @@ There is a lot more you can do:
   ```
 - [sphinx-autobuild](https://pypi.org/project/sphinx-autobuild/)
   provides a local web server that will automatically refresh your view
-  every time you save a file - which makes writing and testing much easier.
+  every time you save a file - which makes writing with live-preview much easier.
 
 
 ## Demo: Building documentation with GitHub Actions
+
+:::{instructor-note}
+- Instructor presents.
+- Learners are encouraged to try this later on their own.
+:::
 
 First we need to extend the `environment.yml` file to include the necessary packages:
 ```{code-block} yaml
@@ -319,10 +324,11 @@ Now:
 - Go to "Settings" -> "Pages" -> "Branch" -> `gh-pages` -> "Save".
 - Look at "Actions" tab and observe the workflow running and hopefully
   deploying the website.
-- Finally visit the generated site. You find it by clicking the About wheel
+- Finally visit the generated site. You can find it by clicking the About wheel
   icon on top right of your repository. There, select "Use your GitHub Pages
   website".
-- **This is how we build almost all of our lesson websites** (including this one).
+- **This is how we build almost all of our lesson websites**,
+  including this one!
 - Another popular place to deploy Sphinx documentation is [ReadTheDocs](https://readthedocs.org/).
 
 

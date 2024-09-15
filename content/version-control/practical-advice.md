@@ -8,8 +8,8 @@
 Useful commit messages **summarize the change and provide context**.
 
 If you need a commit message that is longer than one line,
-then the convention is: **one line summarizing the commit, then one empty line,
-then paragraph(s) with more details in free form, if necessary**.
+then the convention is: one line summarizing the commit, then one empty line,
+then paragraph(s) with more details in free form, if necessary.
 
 Good example:
 ```{code-block} text
@@ -92,9 +92,9 @@ But remember: it is better to make any commit, than no commit. Especially in sma
 - Better too small than too large (easier to combine than to split).
 - Often I make a commit at the end of the day (this is a unit I would not like to lose).
 - Smaller sized commits may be easier to review for others than huge commits.
-- Imperfect commits are better than no commits.
 - A commit should not contain unrelated changes to simplify review and possible
   repair/adjustments/undo later (but again: imperfect commits are better than no commits).
+- Imperfect commits are better than no commits.
 
 
 ## Working on the command line? Use "git status" all the time
@@ -130,7 +130,7 @@ which files might not be tracked, etc.
   commits than no commits.
 
 - When working with branches:
+  - Working on unrelated things on the same branch.
   - Not updating your branch before starting new work.
   - Too ambitious branch which risks to never get completed.
-  - Over-engineering the branch layout and safeguards in small projects.
-  - Working on unrelated things on the same branch.
+  - Over-engineering the branch layout and safeguards in small projects -> can turn people away from your project.

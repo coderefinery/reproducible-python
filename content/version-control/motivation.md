@@ -7,7 +7,7 @@
 - Remember that commits are like **snapshots** of the repository at a certain
   point in time.
 - Know the difference between **Git** (something that tracks changes) and
-  **GitHub/GitLab** (a platform to host Git repositories).
+  **GitHub/GitLab** (a web platform to host Git repositories).
 :::
 
 
@@ -59,8 +59,8 @@ of them?):
 
 - **Branching and merging**:
   - Work on different ideas at the same time
-  - Different people can work on the same code/project without interfering
   - You can experiment with an idea and discard it if it turns out to be a bad idea
+  - Different people can work on the same code/project without interfering
 
 :::{figure} img/gophers.png
 :alt: Branching explained with a gopher

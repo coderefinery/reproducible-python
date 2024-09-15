@@ -8,10 +8,9 @@ workshop we assume that most workshop participants use Python in their work or
 a leading a group which uses Python.  Therefore, some of the examples will use
 Python as the example language.
 
-We will work with an example project and go through all the steps of a typical
-software project.  Once we have seen the building blocks, we will try to apply
-them to own projects. Workshop participants will receive and also learn to give
-constructive code feedback.
+We will work with an example project and go through all important steps of a typical
+software project.  Once we have seen the building blocks, we will try to **apply
+them to own projects**.
 
 
 ## Prerequisites
@@ -39,7 +38,6 @@ constructive code feedback.
 - 13:00-13:30 - **Welcome and introduction**
   - Practical information (tools, communication, breaks, etc.)
   - Motivation (reproducibility, robustness, distribution, improvement, trust, etc.)
-  - What will learn and achieve from this course?
   - {ref}`example-project`
 
 - 13:30-14:45 - {ref}`version-control` (1/2)

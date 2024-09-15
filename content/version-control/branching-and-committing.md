@@ -10,7 +10,7 @@ on the "main" branch (which happens to be the default branch here).
 :::{objectives}
 - Record new changes to our own copy of the project.
 - Understand adding changes in two separate branches.
-- See how to compare different versions.
+- See how to compare different versions or branches.
 :::
 
 
@@ -50,7 +50,7 @@ Illustration of what we want to achieve in this exercise.
 :::{exercise} Exercise: Practice creating commits and branches (20 min)
 1. First create a new branch and then either add a new file or modify an
    existing file and commit the change.  Make sure that you now work **on your
-   copy** of the example repository. In your commit you can share a Git or
+   copy** of the example repository. In your new commit you can share a Git or
    programming trick you like.
 1. In a new commit, modify the file again.
 1. Switch to the `main` branch and create a commit there.
@@ -75,8 +75,8 @@ design.
 :::::{tabs}
 ::::{group-tab} GitHub
 1. Where it says "main" at the top left, click, enter a new branch
-   name `new-tutorial`, click on the offer to create the new branch
-   ("Create branch new-tutorial from main").
+   name (e.g. `new-tutorial`), then click on
+   "Create branch ... from main".
 1. Make sure you are still on the `new-tutorial` branch (it should say
    it at the top), and click "Add file" → "Create new file" from the
    upper right.
@@ -175,7 +175,7 @@ $ git commit -m "short summary of the change"
 
 ### (4) Browse the commits you just made
 
-Let's look at what we did.  Now, the `main` and `new-tutorial` branches
+Let's look at what we did.  Now, the `main` and the new branches
 have diverged: both have some modifications. Try to find the commits
 you created.
 
@@ -210,7 +210,7 @@ it makes sense later on.
 ::::{group-tab} GitHub
 A nice way to compare branches is to add `/compare` to the URL of the repository,
 for example (replace USER):
-`https://github.com/USER/planets/compare`
+https://github.com/**USER**/planets/compare
 ::::
 
 ::::{group-tab} VS Code
@@ -243,7 +243,7 @@ This is similar to above, but not only between branches.
 ::::{group-tab} GitHub
 Following the `/compare`-trick above, one can compare commits on GitHub by
 adjusting the following URL:
-`https://github.com/USER/planets/compare/VERSION1..VERSION2`
+https://github.com/**USER**/planets/compare/**VERSION1**..**VERSION2**
 
 Replace `USER` with your username and `VERSION1` and `VERSION2` with a commit hash or branch name.
 Please try it out.

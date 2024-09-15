@@ -135,7 +135,7 @@ Here are all the keywords that GitHub recognizes:
 Then observe what happens in the issue once your commit gets merged: it will
 automatically close the issue and create a link between the issue and the
 commit. This is very useful for tracking what changes were made in response to
-which issue and to know from when until when precisely the issue was open.
+which issue and to know from when **until when precisely** the issue was open.
 
 
 ### (4) Push to GitHub as a new branch
@@ -275,6 +275,6 @@ To protect a branch in your own repository, go to "Settings" -> "Branches".
 ### Summary
 
 - We used all the same pieces that we've learned previously.
-- But we successfully contributed to a collaborative project!
+- But we successfully contributed to a **collaborative project**!
 - The pull request allowed us to contribute without changing directly:
   this is very good when it's not mainly our project.

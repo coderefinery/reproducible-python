@@ -22,7 +22,7 @@ From a bunch of files to a local repository which we then share on GitHub.
 
 :::::{exercise} Exercise: Turn your project to a Git repo and share it (20 min)
 
-1. Create a new directory called **myproject** with one or few files in it.
+1. Create a new directory called **myproject** (or a different name) with one or few files in it.
    This represents our own project. It is not yet a Git repository. You can try
    that with your own project or use a simple placeholder example.
 2. Turn this new directory into a Git repository.

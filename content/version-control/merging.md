@@ -8,7 +8,7 @@ means that we have to somehow combine the changes later. In this part we will
 practice this: **merging**.
 
 :::{objectives}
-- Understand that on GitHub merging is done through a **pull request**. Think
+- Understand that on GitHub merging is done through a **pull request** (on GitLab: "merge request"). Think
   of it as a **change proposal**.
 - Create and merge a pull request within your own repository.
 - Understand (and optionally) do the same across repositories, to contribute to
@@ -105,8 +105,7 @@ frustrated because they forgot this!
 
 :::::{tabs}
 ::::{group-tab} GitHub
-GitHub will notice a recently changed branch and offer to make a pull request:
-merge **from**:
+GitHub will notice a recently changed branch and offer to make a pull request (clicking there will bring you to step 3):
    :::{figure} img/merging/github-compare-and-pr.png
    :alt: Screenshot on GitHub suggesting to compare and make a pull request.
    :width: 80%
@@ -333,7 +332,8 @@ $ git log --oneline
 
 ### (7) Contribute to the original repository with a pull request
 
-Remember, this is an advanced step.  We will practice this tomorrow.
+This is an advanced step. We will practice this tomorrow and
+it is OK to skip this at this stage.
 
 :::::{tabs}
 ::::{group-tab} GitHub
@@ -341,7 +341,7 @@ Now that you know how to create branches and opening a pull request, try to
 open a new pull request with a new change but this time the base repository
 should be the upstream one.
 
-In other words, you now send a pull request across repositories: from your fork
+In other words, you now send a pull request **across repositories**: from your fork
 to the original repository.
 
 Another thing that is different now is that you might not have permissions to

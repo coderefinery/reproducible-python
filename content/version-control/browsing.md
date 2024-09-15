@@ -97,8 +97,8 @@ Work on this by yourself or in pairs.
 In this case you will work on a fork.
 
 You only need to open your own view, as described above.  The browser
-URL should look like `https://github.com/USER/planets`, where
-`USER` is your GitHub username.
+URL should look like https://github.com/**USER**/planets, where
+USER is your GitHub username.
 ::::
 
 ::::{group-tab} VS Code
@@ -158,9 +158,9 @@ prepare questions.  The hints are for the GitHub path in the browser.
    (Hint: "History" button in the file view)
 1. **Which files include the word "position"**?
    (Hint: the GitHub search on top of the repository view)
-1. In the `simulate.py` file, find out **who modified each line last and when**
-   (click on file, then click "Blame" button). Find out who modified the gravitational constant
-   last and in which commit.
+1. In the `simulate.py` file,
+   find out who modified the "gravitational constant"
+   last and **in which commit**.
    (Hint: "Blame" view in the file view)
 1. Can you use this code yourself? **Are you allowed to share
    modifications**?
@@ -219,8 +219,8 @@ $ git log --oneline
 ### (2) Compare commit history with network graph
 
 The commit history we saw above looks linear: one commit after
-another.  But if we look at the network view, we see some branches and
-merges.  We'll see how to do these later.  This is another one of the
+another.  But if we look at the network view, we see some branching and merging points.
+We'll see how to do these later.  This is another one of the
 basic Git views.
 
 :::::{tabs}
@@ -288,8 +288,8 @@ $ git log simulate.py
 
 ### (4) Which files include the word "position"?
 
-Version control makes it very easy to find all occurrences of a single
-word. This is useful for things like finding where functions or
+Version control makes it very easy to find all occurrences of a
+word or pattern. This is useful for things like finding where functions or
 variables are defined or used.
 
 :::::{tabs}
@@ -324,7 +324,7 @@ $ git grep -i position       # case insensitive
 :::::
 
 
-### (5) Who modified each line last and when?
+### (5) Who modified a particular line last and when?
 
 This is called the "annotate" or "blame" view. The name "blame"
 is very unfortunate, but it is the standard term for historical reasons
@@ -334,7 +334,8 @@ for this functionality and it is not meant to blame anyone.
 
 ::::{group-tab} GitHub
 From a file view, change preview to "Blame" towards the top-left.
-To get the actual commit, click on the commit message.
+To get the actual commit, click on the commit message next
+to the code line that you are interested in.
 ::::
 
 ::::{group-tab} VS Code
