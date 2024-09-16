@@ -130,6 +130,7 @@ profiling
 :caption: Reference
 :hidden:
 
+PDF version <https://coderefinery.github.io/reproducible-python/lesson.pdf>
 credit
 All lessons <https://coderefinery.org/lessons/>
 CodeRefinery <https://coderefinery.org/>
