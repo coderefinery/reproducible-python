@@ -83,7 +83,8 @@ them to own projects**.
   - {ref}`refactoring-concepts` (15 min)
 
 - 15:00-16:30 - How to release and publish your code
-  - {ref}`licensing-publishing` (45 min)
+  - {ref}`software-licensing` (30 min)
+  - {ref}`publishing` (15 min)
   - {ref}`packaging` (45 min)
 
 - 16:45-18:00 - **Debriefing and Q&A**
@@ -120,7 +121,8 @@ testing
 reusable
 refactoring-demo
 refactoring-concepts
-licensing-publishing
+software-licensing
+publishing
 packaging
 profiling
 ```
