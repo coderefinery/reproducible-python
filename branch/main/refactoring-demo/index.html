@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo: From a script towards a workflow &mdash; Reproducible research software development using Python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=0c089442" />
+      <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx_rtd_theme_ext_color_contrast.css?v=8e8ea19f" />
+      <link rel="stylesheet" type="text/css" href="../_static/style.css?v=791bfbd6" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/coderefinery.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=187304be"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=582ca9e2"></script>
+        <script src="../_static/minipres.js?v=a0d29692"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script data-domain="coderefinery.github.io" defer="defer" src="https://plausible.cs.aalto.fi/js/script.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Choosing a software license" href="../software-licensing/" />
+    <link rel="prev" title="Concepts in refactoring and modular code design" href="../refactoring-concepts/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Reproducible research software development using Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Software environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/conda/">Conda environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/virtual-environment/">Virtual environment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Episodes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../example/">Example project: Simulating the motion of planets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version-control/">Introduction to version control with Git and GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/">Code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../collaboration/">Collaborative version control and code review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing/">Automated testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reusable/">How to make the project more reusable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refactoring-concepts/">Concepts in refactoring and modular code design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Demo: From a script towards a workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plan">Plan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#possible-solutions">Possible solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software-licensing/">Choosing a software license</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing/">How to publish your code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packaging/">Creating a Python package and deploying it to PyPI</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.github.io/reproducible-python/lesson.pdf">PDF version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit/">Credit</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/">All lessons</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/">CodeRefinery</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://coderefinery.org/lessons/reusing/">Reusing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Reproducible research software development using Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Demo: From a script towards a workflow</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/reproducible-python/blob/main/content/refactoring-demo.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="demo-from-a-script-towards-a-workflow">
+<span id="refactoring-demo"></span><h1>Demo: From a script towards a workflow<a class="headerlink" href="#demo-from-a-script-towards-a-workflow" title="Link to this heading"></a></h1>
+<p>In this episode we will explore code quality and good practices in Python using
+a hands-on approach. We will together build up a small project and improve it
+step by step.</p>
+<p>We will start from a relatively simple image processing script which can read a
+telescope image of stars and our goal is to <strong>count the number of stars</strong> in
+the image. Later we will want to be able to process many such images.</p>
+<p>The (fictional) telescope images look like the one below here (<a class="reference external" href="https://github.com/workshop-material/random-star-images">in this
+repository</a> we can find more):</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/stars.png"><img alt="Generated image representing a telescope image of stars" src="../_images/stars.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Generated image representing a telescope image of stars.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-rough-plan-for-this-demo admonition">
+<p class="admonition-title">Rough plan for this demo</p>
+<ul class="simple">
+<li><p>(15 min) Discuss how we would solve the problem, run example code, and make it work (as part of a Jupyter notebook)?</p></li>
+<li><p>(15 min) Refactor the positioning code into a function and a module</p></li>
+<li><p>(15 min) Now we wish to process many images - discuss how we would approach this</p></li>
+<li><p>(15 min) Introduce CLI and discuss the benefits</p></li>
+<li><p>(30 min) From a script to a workflow (using Snakemake)</p></li>
+</ul>
+</div>
+<div class="admonition-starting-point-spoiler-alert solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Starting point (spoiler alert)</p>
+<p>We can imagine that we pieced together the following code
+based on some examples we found online:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">io</span><span class="p">,</span> <span class="n">filters</span><span class="p">,</span> <span class="n">color</span>
+<span class="kn">from</span> <span class="nn">skimage.measure</span> <span class="kn">import</span> <span class="n">label</span><span class="p">,</span> <span class="n">regionprops</span>
+
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;stars.png&quot;</span><span class="p">)</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="c1"># if there is a fourth channel (alpha channel), ignore it</span>
+<span class="n">rgb_image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">gray_image</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">rgb2gray</span><span class="p">(</span><span class="n">rgb_image</span><span class="p">)</span>
+
+<span class="c1"># apply a gaussian filter to reduce noise</span>
+<span class="n">image_smooth</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">gray_image</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+
+<span class="c1"># threshold the image to create a binary image (bright stars will be white, background black)</span>
+<span class="n">thresh</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image_smooth</span><span class="p">)</span>
+<span class="n">binary_image</span> <span class="o">=</span> <span class="n">image_smooth</span> <span class="o">&gt;</span> <span class="n">thresh</span>
+
+<span class="c1"># label connected regions (stars) in the binary image</span>
+<span class="n">labeled_image</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">binary_image</span><span class="p">)</span>
+
+<span class="c1"># get properties of labeled regions</span>
+<span class="n">regions</span> <span class="o">=</span> <span class="n">regionprops</span><span class="p">(</span><span class="n">labeled_image</span><span class="p">)</span>
+
+<span class="c1"># extract star positions (centroids)</span>
+<span class="n">star_positions</span> <span class="o">=</span> <span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">centroid</span> <span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">regions</span><span class="p">]</span>
+
+<span class="c1"># plot the original image</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+
+<span class="c1"># overlay star positions with crosses</span>
+<span class="k">for</span> <span class="n">star</span> <span class="ow">in</span> <span class="n">star_positions</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">star</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">star</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;rx&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;detected-stars.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;number of stars detected: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">star_positions</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<section id="plan">
+<h2>Plan<a class="headerlink" href="#plan" title="Link to this heading"></a></h2>
+<p>Topics we wish to show and discuss:</p>
+<ul class="simple">
+<li><p>Naming (and other) conventions, project organization, modularity</p></li>
+<li><p>The value of pure functions and immutability</p></li>
+<li><p>Refactoring (explained through examples)</p></li>
+<li><p>Auto-formatting and linting with tools like black, vulture, ruff</p></li>
+<li><p>Moving a project under Git</p></li>
+<li><p>How to document dependencies</p></li>
+<li><p>Structuring larger software projects in a modular way</p></li>
+<li><p>Command-line interfaces</p></li>
+<li><p>Workflows with Snakemake</p></li>
+</ul>
+<p>We will work together on the code on the big screen, and participants will be
+encouraged to give suggestions and ask questions.  We will <strong>end up with a Git
+repository</strong> which will be shared with workshop participants.</p>
+</section>
+<section id="possible-solutions">
+<h2>Possible solutions<a class="headerlink" href="#possible-solutions" title="Link to this heading"></a></h2>
+<div class="admonition-script-after-some-work-with-command-line-interface-spoiler-alert solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Script after some work, with command-line interface (spoiler alert)</p>
+<p>This is one possible solution (<code class="docutils literal notranslate"><span class="pre">countstars.py</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">click</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">io</span><span class="p">,</span> <span class="n">filters</span><span class="p">,</span> <span class="n">color</span>
+<span class="kn">from</span> <span class="nn">skimage.measure</span> <span class="kn">import</span> <span class="n">label</span><span class="p">,</span> <span class="n">regionprops</span>
+
+
+<span class="k">def</span> <span class="nf">convert_to_gray</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="c1"># if there is a fourth channel (alpha channel), ignore it</span>
+    <span class="n">rgb_image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">color</span><span class="o">.</span><span class="n">rgb2gray</span><span class="p">(</span><span class="n">rgb_image</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">locate_positions</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="n">gray_image</span> <span class="o">=</span> <span class="n">convert_to_gray</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+    <span class="c1"># apply a gaussian filter to reduce noise</span>
+    <span class="n">image_smooth</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">gray_image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="c1"># threshold the image to create a binary image (bright objects will be white, background black)</span>
+    <span class="n">thresh</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image_smooth</span><span class="p">)</span>
+    <span class="n">binary_image</span> <span class="o">=</span> <span class="n">image_smooth</span> <span class="o">&gt;</span> <span class="n">thresh</span>
+
+    <span class="c1"># label connected regions in the binary image</span>
+    <span class="n">labeled_image</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">binary_image</span><span class="p">)</span>
+
+    <span class="c1"># get properties of labeled regions</span>
+    <span class="n">regions</span> <span class="o">=</span> <span class="n">regionprops</span><span class="p">(</span><span class="n">labeled_image</span><span class="p">)</span>
+
+    <span class="c1"># extract positions (centroids)</span>
+    <span class="n">positions</span> <span class="o">=</span> <span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">centroid</span> <span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">regions</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">positions</span>
+
+
+<span class="k">def</span> <span class="nf">plot_positions</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+    <span class="c1"># plot the original image</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+
+    <span class="c1"># overlay positions with crosses</span>
+    <span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;rx&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+
+
+<span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span>
+    <span class="s2">&quot;--image-file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Path to the input image&quot;</span>
+<span class="p">)</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;--output-file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(),</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Path to the output file&quot;</span><span class="p">)</span>
+<span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;--generate-plot&quot;</span><span class="p">,</span> <span class="n">is_flag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">image_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">generate_plot</span><span class="p">):</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_file</span><span class="p">)</span>
+
+    <span class="n">star_positions</span> <span class="o">=</span> <span class="n">locate_positions</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">generate_plot</span><span class="p">:</span>
+        <span class="n">plot_positions</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">star_positions</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;detected-</span><span class="si">{</span><span class="n">image_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;number of stars detected: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">star_positions</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-snakemake-rules-which-define-a-workflow-spoiler-alert solution important dropdown admonition" id="solution-2">
+<p class="admonition-title">Snakemake rules which define a workflow (spoiler alert)</p>
+<p>This is one possible solution (<code class="docutils literal notranslate"><span class="pre">snakefile</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># the comma is there because glob_wildcards returns a named tuple</span>
+<span class="n">numbers</span><span class="p">,</span> <span class="o">=</span> <span class="n">glob_wildcards</span><span class="p">(</span><span class="s2">&quot;input-images/stars-</span><span class="si">{number}</span><span class="s2">.png&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># rule that collects the target files</span>
+<span class="n">rule</span> <span class="nb">all</span><span class="p">:</span>
+    <span class="nb">input</span><span class="p">:</span>
+        <span class="n">expand</span><span class="p">(</span><span class="s2">&quot;results/</span><span class="si">{number}</span><span class="s2">.txt&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="n">numbers</span><span class="p">)</span>
+
+
+<span class="n">rule</span> <span class="n">process_data</span><span class="p">:</span>
+    <span class="nb">input</span><span class="p">:</span>
+        <span class="s2">&quot;input-images/stars-</span><span class="si">{number}</span><span class="s2">.png&quot;</span>
+    <span class="n">output</span><span class="p">:</span>
+        <span class="s2">&quot;results/</span><span class="si">{number}</span><span class="s2">.txt&quot;</span>
+    <span class="n">log</span><span class="p">:</span>
+        <span class="s2">&quot;logs/</span><span class="si">{number}</span><span class="s2">.txt&quot;</span>
+    <span class="n">shell</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        python countstars.py --image-file {input} --output-file {output}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>We can process as many images as we like by running:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>snakemake<span class="w"> </span>--cores<span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="c1"># adjust to the number of available cores</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../refactoring-concepts/" class="btn btn-neutral float-left" title="Concepts in refactoring and modular code design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../software-licensing/" class="btn btn-neutral float-right" title="Choosing a software license" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright CodeRefinery team (CC-BY license).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
