@@ -96,8 +96,8 @@ repository** which will be shared with workshop participants.
 ## Possible solutions
 
 :::{solution} Script after some work, with command-line interface (spoiler alert)
-This is one possible solution (`count-stars.py`):
-```{literalinclude} refactoring/count-stars.py
+This is one possible solution (`countstars.py`):
+```{literalinclude} refactoring/countstars.py
 :language: python
 ```
 :::

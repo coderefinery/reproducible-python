@@ -17,5 +17,5 @@ rule process_data:
         "logs/{number}.txt"
     shell:
         """
-        python count-stars.py --image-file {input} --output-file {output}
+        python countstars.py --image-file {input} --output-file {output}
         """
