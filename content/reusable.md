@@ -51,7 +51,7 @@ If somebody asks you what dependencies you have in your project, you should be
 able to answer this question **with a file**.
 
 In Python, the two most common ways to do this are:
-- **requirements.txt** (for `pip` and virtual environments)
+- **requirements.txt** (for pip and virtual environments)
 - **environment.yml** (for conda and similar)
 
 You can export the dependencies from your current environment into these files:
