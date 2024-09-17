@@ -94,11 +94,6 @@ them to own projects**.
   - Give individual feedback on code projects
 
 
-### If we have time left
-
-- {ref}`profiling`
-
-
 ```{toctree}
 :maxdepth: 1
 :caption: Software environment
@@ -124,7 +119,6 @@ refactoring-concepts
 software-licensing
 publishing
 packaging
-profiling
 ```
 
 ```{toctree}
