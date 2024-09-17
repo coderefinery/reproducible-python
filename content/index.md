@@ -79,8 +79,8 @@ them to own projects**.
 - 10:45-12:15 - {ref}`reusable`
 
 - 13:00-14:45 - Code quality and good practices
-  - {ref}`refactoring-demo` (90 min)
   - {ref}`refactoring-concepts` (15 min)
+  - {ref}`refactoring-demo` (90 min)
 
 - 15:00-16:30 - How to release and publish your code
   - {ref}`software-licensing` (30 min)
@@ -114,8 +114,8 @@ documentation
 collaboration
 testing
 reusable
-refactoring-demo
 refactoring-concepts
+refactoring-demo
 software-licensing
 publishing
 packaging
